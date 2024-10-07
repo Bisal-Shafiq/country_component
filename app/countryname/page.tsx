@@ -7,6 +7,7 @@ export default function Page() {
                 <li><Link href="/countryname/pakistan">Pakistan</Link></li>
                 <li><Link href="/countryname/korea">Korea</Link></li>
                 <li><Link href="/countryname/japan">Japan</Link></li>
+                <li><Link href="/countryname/india">India</Link></li>
             </ul>
         </div>
     );

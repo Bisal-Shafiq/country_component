@@ -1,3 +1,4 @@
+import Country from "@/app/component/Country"
 
 
 export default function  CountryName( {params} : {params:{country_name:string}}){
@@ -35,19 +36,17 @@ export default function  CountryName( {params} : {params:{country_name:string}})
         return countries.find(country => country.name.toLowerCase() == country_url.toLowerCase())
     }
 
-    let result = findCountry(params.country_name)
+    const result = findCountry(params.country_name)
 
     return(
         <div>
             {
                 result ? (
                     <>
-                        <h1>Country Name : {result.name}</h1>
-                        <h1>Population : {result.population}</h1>
-                        <h1>Population : {result.capital}</h1>
+                       <Country name={result.name} population={result.population} capital={result.capital} />
                     </>
                 
-                ): (
+                ) : (
                         <h1>Country not found</h1>
                     )
             }
